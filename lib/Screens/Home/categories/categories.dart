@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:odd_1/Screens/Home/categories/fashion.dart';
+import 'package:odd_1/Screens/Home/categories/category%20page.dart';
 import 'package:odd_1/Screens/Home/offers/offer_page.dart';
 
 class Categories extends StatefulWidget {

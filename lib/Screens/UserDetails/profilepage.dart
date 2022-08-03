@@ -1,11 +1,18 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
-import 'package:odd_1/Bars/BottomBar.dart';
-import 'package:odd_1/Screens/Home/homeitem.dart';
+import 'package:odd_1/Asset/big_text.dart';
 import 'package:odd_1/Bars/AppBar.dart';
+import 'package:odd_1/Bars/BottomBar.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class customprofile extends StatefulWidget {
+  const customprofile({Key? key}) : super(key: key);
 
+  @override
+  State<customprofile> createState() => _customprofileState();
+}
+
+class _customprofileState extends State<customprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +25,7 @@ class Home extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
-          Expanded(
-            child: SingleChildScrollView(
-              child: homeitem(),
-            ),
-          ),
+          Expanded(child: Center(child: Text('This is a demo offer page'))),
         ],
       ),
       bottomNavigationBar: const BottomAppBar(
