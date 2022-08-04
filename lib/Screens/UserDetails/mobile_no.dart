@@ -21,22 +21,22 @@ class _LoginState extends State<Login> {
             key: _formKey,
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  padding: EdgeInsets.all(70),
-                  child: Image(
+                  padding: const EdgeInsets.all(70),
+                  child: const Image(
                     image: AssetImage("images/Logo.jpg"),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: "Enter Mobile No",
                       labelText: "Mobile No",
                     ),
@@ -50,11 +50,11 @@ class _LoginState extends State<Login> {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(250, 10, 10, 0),
+                  padding: const EdgeInsets.fromLTRB(250, 10, 10, 0),
                   child: RaisedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
@@ -64,7 +64,7 @@ class _LoginState extends State<Login> {
                         );
                       }
                     },
-                    child: Text('Next >'),
+                    child: const Text('Next >'),
                     color: Colors.orangeAccent,
                   ),
                 ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:odd_1/Asset/big_text.dart';
-import 'package:odd_1/Bars/AppBar.dart';
 import 'package:odd_1/Bars/BottomBar.dart';
+import 'package:odd_1/Screens/Home/offers/offeritemlist.dart';
 
 class OfferPage extends StatelessWidget {
   const OfferPage({Key? key}) : super(key: key);
@@ -12,13 +11,36 @@ class OfferPage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        title: const customappbar(),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              width: 50,
+              height: 50,
+              child: Image.asset(
+                ('images/Logo.jpg'),
+              ),
+            ),
+            SizedBox(
+              width: 50,
+              height: 50,
+              child: IconButton(
+                color: Colors.black,
+                onPressed: () {},
+                icon: const Icon(Icons.search),
+              ),
+            ),
+          ],
+        ),
       ),
       backgroundColor: Colors.white,
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
-          Expanded(child: Center(child: Text('This is a demo offer page'))),
+          Expanded(
+            child: SingleChildScrollView(
+              child: offeritemlist(),
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: const BottomAppBar(
@@ -28,3 +50,12 @@ class OfferPage extends StatelessWidget {
     );
   }
 }
+
+/**SizedBox(
+                              height: 20,
+                              child: FlatButton(
+                                onPressed: () {},
+                                child: Text('Add To Cart'),
+                                color: Colors.orangeAccent,
+                              ),
+                            ), */

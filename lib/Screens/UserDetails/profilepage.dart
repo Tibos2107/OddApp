@@ -1,8 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:odd_1/Asset/big_text.dart';
-import 'package:odd_1/Bars/AppBar.dart';
 import 'package:odd_1/Bars/BottomBar.dart';
 
 class customprofile extends StatefulWidget {
@@ -19,14 +16,40 @@ class _customprofileState extends State<customprofile> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        title: const customappbar(),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: 50,
+              height: 50,
+              child: Image.asset(
+                ('images/Logo.jpg'),
+              ),
+            ),
+            Container(
+                padding: EdgeInsets.all(15),
+                child: BigText(
+                  text: 'ACCOUNT',
+                  size: 30,
+                  color: Colors.orangeAccent,
+                )),
+          ],
+        ),
       ),
       backgroundColor: Colors.white,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          Expanded(child: Center(child: Text('This is a demo offer page'))),
-        ],
+      body: Container(
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [],
+              ),
+            ),
+            Container(),
+          ],
+        ),
       ),
       bottomNavigationBar: const BottomAppBar(
         color: Colors.orangeAccent,

@@ -32,7 +32,7 @@ class _CategoriesState extends State<Categories> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Fashion()),
+                                builder: (context) => const CategoryPage()),
                           );
                         },
                         child: Container(
@@ -66,7 +66,7 @@ class _CategoriesState extends State<Categories> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Fashion()),
+                                builder: (context) => const CategoryPage()),
                           );
                         },
                         child: Container(
@@ -108,7 +108,7 @@ class _CategoriesState extends State<Categories> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Fashion()),
+                                builder: (context) => const CategoryPage()),
                           );
                         },
                         child: Container(
@@ -142,7 +142,7 @@ class _CategoriesState extends State<Categories> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Fashion()),
+                                builder: (context) => const CategoryPage()),
                           );
                         },
                         child: Container(
@@ -182,7 +182,7 @@ class _CategoriesState extends State<Categories> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Fashion()),
+                              builder: (context) => const CategoryPage()),
                         );
                       },
                       child: Container(
@@ -216,7 +216,7 @@ class _CategoriesState extends State<Categories> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Fashion()),
+                              builder: (context) => const CategoryPage()),
                         );
                       },
                       child: Container(
@@ -255,7 +255,7 @@ class _CategoriesState extends State<Categories> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Fashion()),
+                              builder: (context) => const CategoryPage()),
                         );
                       },
                       child: Container(
@@ -289,7 +289,7 @@ class _CategoriesState extends State<Categories> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Fashion()),
+                              builder: (context) => const CategoryPage()),
                         );
                       },
                       child: Container(

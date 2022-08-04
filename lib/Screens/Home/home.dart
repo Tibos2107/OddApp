@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:odd_1/Bars/BottomBar.dart';
 import 'package:odd_1/Screens/Home/homeitem.dart';
-import 'package:odd_1/Bars/AppBar.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -12,7 +11,27 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        title: const customappbar(),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              width: 50,
+              height: 50,
+              child: Image.asset(
+                ('images/Logo.jpg'),
+              ),
+            ),
+            SizedBox(
+              width: 50,
+              height: 50,
+              child: IconButton(
+                color: Colors.black,
+                onPressed: () {},
+                icon: const Icon(Icons.search),
+              ),
+            ),
+          ],
+        ),
       ),
       backgroundColor: Colors.white,
       body: Column(
