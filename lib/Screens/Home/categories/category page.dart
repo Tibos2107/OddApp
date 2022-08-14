@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:odd_1/Bars/BottomBar.dart';
 import 'package:odd_1/Screens/Home/categories/categoryitemlist.dart';
+import 'package:odd_1/Screens/search.dart';
 
 class CategoryPage extends StatefulWidget {
   const CategoryPage({Key? key}) : super(key: key);
@@ -14,24 +15,27 @@ class _CategoryPageState extends State<CategoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        elevation: 0,
+        foregroundColor: Colors.black,
         backgroundColor: Colors.white,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(
+            const SizedBox(
               width: 50,
               height: 50,
-              child: Image.asset(
-                ('images/Logo.jpg'),
-              ),
             ),
             SizedBox(
               width: 50,
               height: 50,
               child: IconButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const search()),
+                  );
+                },
                 icon: const Icon(Icons.search),
               ),
             ),

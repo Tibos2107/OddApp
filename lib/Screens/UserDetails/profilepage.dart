@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:odd_1/Asset/big_text.dart';
 import 'package:odd_1/Bars/BottomBar.dart';
+import 'package:odd_1/Screens/UserDetails/mobile_no.dart';
+import 'package:odd_1/Screens/UserDetails/withoutlogin.dart';
 
 class customprofile extends StatefulWidget {
   const customprofile({Key? key}) : super(key: key);
@@ -10,46 +12,23 @@ class customprofile extends StatefulWidget {
 }
 
 class _customprofileState extends State<customprofile> {
+  bool loggedin = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(
-              width: 50,
-              height: 50,
-              child: Image.asset(
-                ('images/Logo.jpg'),
-              ),
-            ),
-            Container(
-                padding: EdgeInsets.all(15),
-                child: BigText(
-                  text: 'ACCOUNT',
-                  size: 30,
-                  color: Colors.orangeAccent,
-                )),
-          ],
+        elevation: 0,
+        title: BigText(
+          text: 'Profile',
+          size: 20,
         ),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
       ),
       backgroundColor: Colors.white,
       body: Container(
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [],
-              ),
-            ),
-            Container(),
-          ],
-        ),
+        child: loggedin ? withoutlogin() : Logout(),
       ),
       bottomNavigationBar: const BottomAppBar(
         color: Colors.orangeAccent,

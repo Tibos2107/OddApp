@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:odd_1/Asset/big_text.dart';
+import 'package:odd_1/Screens/Home/Services/Service.dart';
 import 'package:odd_1/Screens/Home/categories/categories.dart';
 import 'package:odd_1/Screens/Home/offers/offers.dart';
 
@@ -43,6 +44,19 @@ class _homeitemState extends State<homeitem> {
             ),
           ),
           const Categories(),
+          Container(
+            padding: const EdgeInsets.all(5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                BigText(
+                  text: 'SERVICES',
+                  size: 15,
+                ),
+              ],
+            ),
+          ),
+          const Service(),
         ],
       ),
     );

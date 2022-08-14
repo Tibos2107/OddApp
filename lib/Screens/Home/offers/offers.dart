@@ -69,7 +69,7 @@ class _OffersState extends State<Offers> {
           child: Container(
             margin: const EdgeInsets.only(left: 5, right: 5),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(20),
               color: const Color.fromARGB(255, 255, 255, 255),
               image: const DecorationImage(
                   fit: BoxFit.cover,

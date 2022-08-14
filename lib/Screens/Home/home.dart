@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:odd_1/Bars/BottomBar.dart';
 import 'package:odd_1/Screens/Home/homeitem.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:odd_1/Screens/UserDetails/profilepage.dart';
+import 'package:odd_1/Screens/cart.dart';
+import 'package:odd_1/Screens/search.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         title: Row(
@@ -26,7 +36,12 @@ class Home extends StatelessWidget {
               height: 50,
               child: IconButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const search()),
+                  );
+                },
                 icon: const Icon(Icons.search),
               ),
             ),

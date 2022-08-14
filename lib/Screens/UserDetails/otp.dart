@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:odd_1/Asset/big_text.dart';
+import 'package:odd_1/Screens/UserDetails/profilepage.dart';
 import '../Home/home.dart';
 
 class Otp extends StatefulWidget {
@@ -38,6 +41,10 @@ class _OtpState extends State<Otp> {
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: TextFormField(
+                        keyboardType: TextInputType.number,
+                        inputFormatters: <TextInputFormatter>[
+                          FilteringTextInputFormatter.digitsOnly
+                        ],
                         obscureText: true,
                         decoration: InputDecoration(
                           hintText: "Enter OTP",
@@ -54,7 +61,6 @@ class _OtpState extends State<Otp> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.only(right: 270),
                       child: FlatButton(
                         onPressed: () {},
                         child: Text('Resend'),
@@ -68,18 +74,23 @@ class _OtpState extends State<Otp> {
                   height: 20,
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(250, 0, 0, 0),
-                  child: RaisedButton(
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const Home()),
-                        );
-                      }
-                    },
-                    child: Text('Next >'),
-                    color: Colors.orangeAccent,
+                  padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  child: ButtonTheme(
+                    minWidth: 400.0,
+                    height: 50.0,
+                    child: RaisedButton(
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const customprofile()),
+                          );
+                        }
+                      },
+                      child: Text('Next >'),
+                      color: Colors.orangeAccent,
+                    ),
                   ),
                 ),
               ],

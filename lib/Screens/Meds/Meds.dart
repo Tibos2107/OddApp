@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'otp.dart';
+import 'package:odd_1/Asset/big_text.dart';
+import 'package:odd_1/Screens/Meds/MedsConfirm.dart';
 
-class Logout extends StatefulWidget {
-  const Logout({Key? key}) : super(key: key);
+class Meds extends StatefulWidget {
+  const Meds({Key? key}) : super(key: key);
 
   @override
-  State<Logout> createState() => _LogoutState();
+  State<Meds> createState() => _MedsState();
 }
 
-class _LogoutState extends State<Logout> {
+class _MedsState extends State<Meds> {
   final _formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.white,
+        title: BigText(text: 'Order Medicine'),
+      ),
       backgroundColor: Colors.white,
       body: Center(
         child: SingleChildScrollView(
@@ -22,10 +28,35 @@ class _LogoutState extends State<Logout> {
             key: _formKey,
             child: Column(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(70),
-                  child: const Image(
+                const SizedBox(
+                  height: 20,
+                ),
+                const SizedBox(
+                  height: 80,
+                  width: 80,
+                  child: Image(
                     image: AssetImage("images/Logo.jpg"),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextFormField(
+                    minLines: 2,
+                    maxLines: 5,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "Enter Medicines",
+                      labelText: "Medicine",
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please Enter Medicine';
+                      }
+                      return null;
+                    },
                   ),
                 ),
                 const SizedBox(
@@ -39,7 +70,8 @@ class _LogoutState extends State<Logout> {
                       FilteringTextInputFormatter.digitsOnly
                     ],
                     decoration: const InputDecoration(
-                      hintText: "Enter Mobile No",
+                      border: OutlineInputBorder(),
+                      hintText: "Enter Your Mobile No",
                       labelText: "Mobile No",
                     ),
                     validator: (value) {
@@ -66,11 +98,11 @@ class _LogoutState extends State<Logout> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Otp()),
+                                builder: (context) => const MedsConfirm()),
                           );
                         }
                       },
-                      child: const Text('Next >'),
+                      child: const Text('Confirm >'),
                       color: Colors.orangeAccent,
                     ),
                   ),
