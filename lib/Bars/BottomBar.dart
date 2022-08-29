@@ -64,33 +64,3 @@ class _custombottomappbarState extends State<custombottomappbar> {
     );
   }
 }
-
-
-/** */
-
-
-    /**
-     * items: <BottomNavyBarItem>[
-        BottomNavyBarItem(
-          icon: Icon(Icons.home),
-          title: Text('Home'),
-          textAlign: TextAlign.center,
-          activeColor: Colors.black,
-          inactiveColor: Colors.grey[850],
-        ),
-        BottomNavyBarItem(
-          icon: Icon(Icons.shopping_cart),
-          title: Text('Cart'),
-          textAlign: TextAlign.center,
-          activeColor: Colors.black,
-          inactiveColor: Colors.grey[850],
-        ),
-        BottomNavyBarItem(
-          icon: Icon(Icons.person),
-          title: Text('Account'),
-          textAlign: TextAlign.center,
-          activeColor: Colors.black,
-          inactiveColor: Colors.grey[850],
-        ),
-      ],
-     */

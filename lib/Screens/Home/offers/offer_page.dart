@@ -54,12 +54,3 @@ class OfferPage extends StatelessWidget {
     );
   }
 }
-
-/**SizedBox(
-                              height: 20,
-                              child: FlatButton(
-                                onPressed: () {},
-                                child: Text('Add To Cart'),
-                                color: Colors.orangeAccent,
-                              ),
-                            ), */

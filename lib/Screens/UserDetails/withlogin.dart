@@ -3,11 +3,13 @@ import 'package:odd_1/Asset/big_text.dart';
 import 'package:odd_1/Bars/BottomBar.dart';
 import 'package:odd_1/Screens/AboutUs.dart';
 import 'package:odd_1/Screens/TermsOfUse.dart';
+import 'package:odd_1/Screens/UserDetails/Address.dart';
 import 'package:odd_1/Screens/UserDetails/Myorders.dart';
 import 'package:odd_1/Screens/UserDetails/mobile_no.dart';
+import 'package:odd_1/Screens/UserDetails/withoutlogin.dart';
 
-class withoutlogin extends StatelessWidget {
-  const withoutlogin({Key? key}) : super(key: key);
+class withlogin extends StatelessWidget {
+  const withlogin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,23 +60,12 @@ class withoutlogin extends StatelessWidget {
                 Positioned(
                   bottom: 11,
                   left: 150,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.orangeAccent),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Logout()),
-                      );
-                    },
-                    child: const SizedBox(
-                      width: 200,
-                      height: 20,
-                      child: Center(child: Text('Log-in/Sign-up')),
-                    ),
-                  ),
+                  child: SizedBox(
+                      height: 40,
+                      child: BigText(
+                        text: 'User Name',
+                        size: 20,
+                      )),
                 ),
               ],
             ),
@@ -84,7 +75,7 @@ class withoutlogin extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Logout()),
+                MaterialPageRoute(builder: (context) => const MyOrders()),
               );
             },
             child: Container(
@@ -123,7 +114,7 @@ class withoutlogin extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Logout()),
+                MaterialPageRoute(builder: (context) => const address()),
               );
             },
             child: Container(
@@ -224,6 +215,33 @@ class withoutlogin extends StatelessWidget {
                   BigText(
                     text: '>',
                     size: 40,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const withoutlogin()),
+              );
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      BigText(
+                        text: 'Log Out',
+                        size: 20,
+                      ),
+                    ],
                   ),
                 ],
               ),
