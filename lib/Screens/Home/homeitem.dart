@@ -4,7 +4,6 @@ import 'package:odd_1/Screens/Home/Services/Service.dart';
 import 'package:odd_1/Screens/Home/categories/categories.dart';
 import 'package:odd_1/Screens/Home/offers/offers.dart';
 
-// ignore: camel_case_types
 class homeitem extends StatefulWidget {
   const homeitem({Key? key}) : super(key: key);
 
@@ -43,6 +42,9 @@ class _homeitemState extends State<homeitem> {
               ],
             ),
           ),
+          const SizedBox(
+            height: 10,
+          ),
           const Categories(),
           Container(
             padding: const EdgeInsets.all(5),
@@ -55,6 +57,9 @@ class _homeitemState extends State<homeitem> {
                 ),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           const Service(),
         ],

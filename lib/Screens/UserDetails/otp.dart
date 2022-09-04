@@ -61,11 +61,12 @@ class _OtpState extends State<Otp> {
                       ),
                     ),
                     Container(
-                      child: FlatButton(
+                      child: TextButton(
                         onPressed: () {},
                         child: Text('Resend'),
-                        textColor: Colors.grey,
-                        color: Colors.white,
+                        style: TextButton.styleFrom(
+                          primary: Colors.grey,
+                        ),
                       ),
                     ),
                   ],
@@ -78,7 +79,7 @@ class _OtpState extends State<Otp> {
                   child: ButtonTheme(
                     minWidth: 400.0,
                     height: 50.0,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           Navigator.push(
@@ -89,7 +90,9 @@ class _OtpState extends State<Otp> {
                         }
                       },
                       child: Text('Next >'),
-                      color: Colors.orangeAccent,
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.orangeAccent,
+                      ),
                     ),
                   ),
                 ),

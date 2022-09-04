@@ -60,7 +60,7 @@ class _LogoutState extends State<Logout> {
                   child: ButtonTheme(
                     minWidth: 400.0,
                     height: 50.0,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           Navigator.push(
@@ -71,7 +71,9 @@ class _LogoutState extends State<Logout> {
                         }
                       },
                       child: const Text('Next >'),
-                      color: Colors.orangeAccent,
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.orangeAccent,
+                      ),
                     ),
                   ),
                 ),

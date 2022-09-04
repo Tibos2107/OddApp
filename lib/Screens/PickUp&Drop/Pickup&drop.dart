@@ -139,7 +139,7 @@ class _pickupState extends State<pickup> {
                   child: ButtonTheme(
                     minWidth: 400.0,
                     height: 50.0,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           Navigator.push(
@@ -150,7 +150,9 @@ class _pickupState extends State<pickup> {
                         }
                       },
                       child: const Text('Confirm >'),
-                      color: Colors.orangeAccent,
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.orangeAccent,
+                      ),
                     ),
                   ),
                 ),

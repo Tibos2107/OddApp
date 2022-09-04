@@ -19,7 +19,7 @@ class _CategoriesState extends State<Categories> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          //Fashion & Home Appliances
+          //Category 1 & 2
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -45,9 +45,9 @@ class _CategoriesState extends State<Categories> {
                             borderRadius: BorderRadius.circular(12),
                             color: const Color.fromARGB(255, 255, 255, 255),
                             image: const DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(
-                                    'https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')),
+                              fit: BoxFit.cover,
+                              image: AssetImage("images/fashion.jpg"),
+                            ),
                           ),
                         ),
                       ),
@@ -79,9 +79,9 @@ class _CategoriesState extends State<Categories> {
                             borderRadius: BorderRadius.circular(12),
                             color: const Color.fromARGB(255, 255, 255, 255),
                             image: const DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(
-                                    'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80')),
+                              fit: BoxFit.cover,
+                              image: AssetImage("images/appliance.jpg"),
+                            ),
                           ),
                         ),
                       ),
@@ -95,7 +95,7 @@ class _CategoriesState extends State<Categories> {
               ],
             ),
           ),
-          // Gadgets & Food
+          // Category 3 & 4
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -121,9 +121,9 @@ class _CategoriesState extends State<Categories> {
                             borderRadius: BorderRadius.circular(12),
                             color: const Color.fromARGB(255, 255, 255, 255),
                             image: const DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(
-                                    'https://images.unsplash.com/photo-1602526432604-029a709e131c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')),
+                              fit: BoxFit.cover,
+                              image: AssetImage("images/gadget.jpg"),
+                            ),
                           ),
                         ),
                       ),
@@ -134,7 +134,7 @@ class _CategoriesState extends State<Categories> {
                     ],
                   ),
                 ),
-                //Food
+                //Two Wheeler Accessories
                 Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -155,15 +155,15 @@ class _CategoriesState extends State<Categories> {
                             borderRadius: BorderRadius.circular(12),
                             color: const Color.fromARGB(255, 255, 255, 255),
                             image: const DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(
-                                    'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')),
+                              fit: BoxFit.cover,
+                              image: AssetImage("images/cosmetic.jpg"),
+                            ),
                           ),
                         ),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(5),
-                        child: Text('Food'),
+                        child: Text('Cosmetics'),
                       )
                     ],
                   ),
@@ -171,7 +171,7 @@ class _CategoriesState extends State<Categories> {
               ],
             ),
           ),
-          //Groceries & Vegetables
+          //Category 5 & 6
           Container(
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               //Groceries
@@ -195,9 +195,9 @@ class _CategoriesState extends State<Categories> {
                           borderRadius: BorderRadius.circular(12),
                           color: const Color.fromARGB(255, 255, 255, 255),
                           image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://images.unsplash.com/photo-1584680226833-0d680d0a0794?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')),
+                            fit: BoxFit.cover,
+                            image: AssetImage("images/grocery.jpg"),
+                          ),
                         ),
                       ),
                     ),
@@ -229,15 +229,127 @@ class _CategoriesState extends State<Categories> {
                           borderRadius: BorderRadius.circular(12),
                           color: const Color.fromARGB(255, 255, 255, 255),
                           image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://images.unsplash.com/photo-1518843875459-f738682238a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=842&q=80')),
+                            fit: BoxFit.cover,
+                            image: AssetImage("images/vegetable.jpg"),
+                          ),
                         ),
                       ),
                     ),
                     const Padding(
                       padding: EdgeInsets.all(5),
-                      child: Text('Vegetables'),
+                      child: Text('Vegetables & Fruits'),
+                    )
+                  ],
+                ),
+              ),
+            ]),
+          ),
+          //Category 7 & 8
+          Container(
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              //2 Wheeler Accessories
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CategoryPage()),
+                        );
+                      },
+                      child: Container(
+                        height: 80,
+                        width: 180,
+                        margin: const EdgeInsets.only(left: 5, right: 5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage("images/accessory.jpg"),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text('2 Wheeler Accessories'),
+                    )
+                  ],
+                ),
+              ),
+              //Bakery
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CategoryPage()),
+                        );
+                      },
+                      child: Container(
+                        height: 80,
+                        width: 180,
+                        margin: const EdgeInsets.only(left: 5, right: 5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage("images/bakery.jpg"),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text('Bakery Items'),
+                    )
+                  ],
+                ),
+              ),
+            ]),
+          ),
+          //Category 9
+          Container(
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              //Local Products
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CategoryPage()),
+                        );
+                      },
+                      child: Container(
+                        height: 80,
+                        width: 180,
+                        margin: const EdgeInsets.only(left: 5, right: 5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage("images/local.jpg"),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(5),
+                      child: Text('Local Products'),
                     )
                   ],
                 ),

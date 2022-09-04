@@ -3,7 +3,7 @@ import 'package:odd_1/Bars/BottomBar.dart';
 import 'package:odd_1/Screens/Home/homeitem.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:odd_1/Screens/UserDetails/profilepage.dart';
-import 'package:odd_1/Screens/cart.dart';
+import 'package:odd_1/Screens/Cart/cart.dart';
 import 'package:odd_1/Screens/search.dart';
 
 class Home extends StatefulWidget {

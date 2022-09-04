@@ -2,7 +2,7 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:odd_1/Screens/Home/home.dart';
 import 'package:odd_1/Screens/UserDetails/profilepage.dart';
-import 'package:odd_1/Screens/cart.dart';
+import 'package:odd_1/Screens/Cart/cart.dart';
 
 class custombottomappbar extends StatefulWidget {
   const custombottomappbar({Key? key}) : super(key: key);

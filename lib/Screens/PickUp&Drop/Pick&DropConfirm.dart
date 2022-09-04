@@ -35,14 +35,16 @@ class PickConfirm extends StatelessWidget {
                 color: Colors.orange,
               ),
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Home()),
                 );
               },
-              color: Colors.orangeAccent,
+              style: ElevatedButton.styleFrom(
+                primary: Colors.orangeAccent,
+              ),
               child: Text('Continue Shopping'),
             ),
           ],

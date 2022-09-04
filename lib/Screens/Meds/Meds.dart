@@ -92,7 +92,7 @@ class _MedsState extends State<Meds> {
                   child: ButtonTheme(
                     minWidth: 400.0,
                     height: 50.0,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           Navigator.push(
@@ -103,7 +103,9 @@ class _MedsState extends State<Meds> {
                         }
                       },
                       child: const Text('Confirm >'),
-                      color: Colors.orangeAccent,
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.orangeAccent,
+                      ),
                     ),
                   ),
                 ),

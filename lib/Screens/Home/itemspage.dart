@@ -168,10 +168,12 @@ class _itempageState extends State<itempage> {
               child: ButtonTheme(
                 minWidth: 400.0,
                 height: 50.0,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {},
                   child: const Text('Add To Cart'),
-                  color: Colors.orangeAccent,
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.orangeAccent,
+                  ),
                 ),
               ),
             ),
